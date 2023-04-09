@@ -8,6 +8,7 @@ void uart_init(uint32_t baudrate)
     rcc_periph_clock_enable(RCC_USART2);
 
     /* Alt Func. GPIO rx/tx uart2 */
+    rcc_periph_clock_enable(RCC_GPIOA);
     gpio_mode_setup(GPIOA, GPIO_MODE_AF, GPIO_PUPD_NONE, GPIO2 | GPIO3);
     gpio_set_af(GPIOA, GPIO_AF7, GPIO2 | GPIO3);
 
