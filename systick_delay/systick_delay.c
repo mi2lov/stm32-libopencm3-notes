@@ -5,7 +5,6 @@ static volatile uint32_t _ticks = 0;
 
 void delay_init(void)
 {
-    /* Configure SysTick to trigger every microsecond. */
     systick_set_frequency(1000000, SYSTEM_CLOCK_FREQUENCY);
     systick_interrupt_enable();
     systick_counter_enable();
