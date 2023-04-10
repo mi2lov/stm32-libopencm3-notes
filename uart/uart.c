@@ -24,6 +24,8 @@ void uart_init(uint32_t baudrate)
     usart_enable(USART2);
 }
 
+//char msg[] = "HELLO";
+//uart_send_blocking(USART2, (uint8_t*)msg, sizeof(msg));
 void uart_send_blocking(uint32_t usart, uint8_t *data, uint32_t len)
 {
     uint32_t i;
